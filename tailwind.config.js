@@ -1,7 +1,6 @@
 /** @type {import('tailwindcss').Config} */
 module.exports = {
   content: ['./app/**/*.{js,ts,tsx}', './components/**/*.{js,ts,tsx}'],
-
   presets: [require('nativewind/preset')],
   theme: {
     extend: {
@@ -28,30 +27,6 @@ module.exports = {
           800: '#523026',
           900: '#3a201c',
         },
-        forest: {
-          50: '#f6fbf6',
-          100: '#e5f5e5',
-          200: '#c4e8c4',
-          300: '#9fd69f',
-          400: '#7ac17a',
-          500: '#5aa85a',
-          600: '#428f42',
-          700: '#2b762b',
-          800: '#1a5d1a',
-          900: '#0f440f',
-        },
-        terracotta: {
-          50: '#fdf7f5',
-          100: '#f9e9e4',
-          200: '#f0d0c4',
-          300: '#e5a893',
-          400: '#d98062',
-          500: '#cc5832',
-          600: '#b4401a',
-          700: '#8e2903',
-          800: '#671800',
-          900: '#401100',
-        },
         cream: {
           50: '#fdfdfc',
           100: '#faf9f7',
@@ -75,18 +50,6 @@ module.exports = {
           700: '#44626e',
           800: '#2d4553',
           900: '#192b38',
-        },
-        neutrals: {
-          50: '#fafafa',
-          100: '#f5f5f4',
-          200: '#e7e5e4',
-          300: '#d6d3d1',
-          400: '#a8a29e',
-          500: '#78716c',
-          600: '#57534e',
-          700: '#44403c',
-          800: '#292524',
-          900: '#1c1917',
         },
         background: '#faf9f7',
         text: {

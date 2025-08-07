@@ -168,7 +168,7 @@ export default function OnboardingUtensils() {
           </TouchableOpacity>
           <TouchableOpacity
             onPress={() => handleDeleteUtensil(item.id)}
-            className="rounded-lg bg-terracotta-500 px-3 py-1">
+            className="bg-terracotta-500 rounded-lg px-3 py-1">
             <Text style={{ fontFamily: 'Nunito_500Medium' }} className="text-cream-50">
               Delete
             </Text>

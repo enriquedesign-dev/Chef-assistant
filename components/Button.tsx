@@ -3,22 +3,25 @@ import { Text, TouchableOpacity, TouchableOpacityProps, View } from 'react-nativ
 
 type ButtonProps = {
   title: string;
+  loading?: boolean;
 } & TouchableOpacityProps;
 
-export const Button = forwardRef<View, ButtonProps>(({ title, ...touchableProps }, ref) => {
-  return (
-    <TouchableOpacity
-      ref={ref}
-      {...touchableProps}
-      className={`${styles.button} ${touchableProps.className}`}>
-      <Text className={styles.buttonText}>{title}</Text>
-    </TouchableOpacity>
-  );
-});
+export const Button = forwardRef<View, ButtonProps>(
+  ({ title, loading = false, ...touchableProps }, ref) => {
+    return (
+      <TouchableOpacity
+        ref={ref}
+        {...touchableProps}
+        disabled={loading || touchableProps.disabled}
+        className={`items-center rounded-lg bg-earth-600 py-4 ${touchableProps.className || ''}`}>
+        {loading ? (
+          <Text className="text-center text-lg font-semibold text-cream-50">Loading...</Text>
+        ) : (
+          <Text className="text-center text-lg font-semibold text-cream-50">{title}</Text>
+        )}
+      </TouchableOpacity>
+    );
+  }
+);
 
 Button.displayName = 'Button';
-
-const styles = {
-  button: 'items-center bg-indigo-500 rounded-[28px] shadow-md p-4',
-  buttonText: 'text-white text-lg font-semibold text-center',
-};

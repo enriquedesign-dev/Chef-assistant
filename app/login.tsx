@@ -39,7 +39,7 @@ export default function Login() {
             .single();
 
           if (profile?.onboarding_complete) {
-            router.push('/debug');
+            router.push('/dashboard');
           } else {
             router.push('/onboarding/ingredients');
           }

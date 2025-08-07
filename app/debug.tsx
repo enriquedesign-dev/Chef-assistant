@@ -109,7 +109,7 @@ export default function Debug() {
             </Text>
             <TouchableOpacity
               onPress={handleLogout}
-              className="rounded-lg bg-terracotta-500 px-4 py-2">
+              className="bg-terracotta-500 rounded-lg px-4 py-2">
               <Text style={{ fontFamily: 'Nunito_500Medium' }} className="text-cream-50">
                 Logout
               </Text>

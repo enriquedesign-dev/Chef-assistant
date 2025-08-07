@@ -166,15 +166,8 @@ export default function OnboardingTastes() {
 
       if (prefError) throw prefError;
 
-      // Mark onboarding as complete
-      const { error: profileError } = await supabase
-        .from('profiles')
-        .update({ onboarding_complete: true })
-        .eq('id', user.id);
-
-      if (profileError) throw profileError;
-
-      router.push('/debug');
+      // Navigate to recipe generation
+      router.push('/onboarding/recipes');
     } catch {
       Alert.alert('Error', 'Failed to save preferences');
     } finally {
